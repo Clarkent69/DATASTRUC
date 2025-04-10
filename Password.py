@@ -2,22 +2,27 @@
 #CS - 241
 
 def is_good_password(password):
+    
     if len(password) < 8:
         return False
-    
-    has_uppercase = any(char.isupper()for char in password)
-    has_lowercase = any(char.islower()for char in password)
-    has_digit = any(char.isdigit()for char in password)
-    
-    return has_uppercase and has_lowercase and has_digit
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        elif char.islower():
+            has_lower = True
+        elif char.isdigit():
+            has_digit = True
+    return has_upper and has_lower and has_digit
 
 def main():
-    password = input ("Enter a Password to check if it's good!: ") 
-    
+    password = input("Please enter your password: ")
     if is_good_password(password):
-        print("That is a good password!")
+        print("The password is good.")
     else:
-        print(" That password is not good. It must be at least 8 characters long, must Atleast contain at least one uppercase letter, one lowercase letter, and one number" )
+        print("The password is not good.")
 
 if __name__ == "__main__":
     main()
