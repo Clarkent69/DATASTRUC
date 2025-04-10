@@ -1,28 +1,28 @@
 #Japhet Melquisedec D. Gonzales
 #CS - 241
 
-def is_good_password(password):
-    
-    if len(password) < 8:
-        return False
-    has_upper = False
-    has_lower = False
-    has_digit = False
-    for char in password:
-        if char.isupper():
-            has_upper = True
-        elif char.islower():
-            has_lower = True
-        elif char.isdigit():
-            has_digit = True
-    return has_upper and has_lower and has_digit
-
 def main():
-    password = input("Please enter your password: ")
-    if is_good_password(password):
-        print("The password is good.")
-    else:
-        print("The password is not good.")
+    total = 0
+    count = 0
+
+    first_value = float(input("Enter the first value (enter 0 to stop): "))
+
+    if first_value == 0:
+        print("Error: You must enter at least one value before the sentinel.")
+        return
+
+    total += first_value
+    count += 1
+
+    while True:
+        next_value = float(input("Enter the next value (enter 0 to stop): "))
+        if next_value == 0:
+            break
+        total += next_value
+        count += 1
+
+    average = total / count
+    print(f"The average of the entered values is: {average:.2f}")
 
 if __name__ == "__main__":
     main()
