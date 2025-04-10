@@ -2,15 +2,7 @@
 #CS - 241
 
 def is_good_password(password):
-    """
-    Checks if a password is good based on the defined criteria.
-
-    Args:
-        password: The password string to check.
-
-    Returns:
-        True if the password is good, False otherwise.
-    """
+    
     if len(password) < 8:
         return False
     has_upper = False
