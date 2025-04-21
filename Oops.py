@@ -12,8 +12,9 @@ class Animal:
     
     def set_age(self, age):
         if age < 0:
-            raise ValueError("Age cannot be negative")
-        self._age = age
+            print("Age cannot be negative")
+        else:
+         self._age = age
     
     def __str__(self):
         return f"{self.name} is a {self.species}, {self._age} years old"
@@ -47,8 +48,8 @@ class Cat(Animal):
         return f"{self.name} is a cat who loves {self.favorite_toy}, {self.get_age()} years old"
 
 def main():
-    dog1 = Dog("Buddy", "Golden Retriever", 3)
-    cat1 = Cat("Whiskers", "yarn ball", 2)
+    dog1 = Dog("Zawg", "Golden Retriever", 3)
+    cat1 = Cat("Miming", "yarn ball", 2)
     
     print(f"{dog1.name}'s age is: {dog1.get_age()}")
     
@@ -61,7 +62,7 @@ def main():
     animals = [
         dog1,
         cat1,
-        Dog("Rex", "German Shepherd", 5),
+        Dog("Schawg", "German Shepherd", 5),
         Cat("Mittens", "toy mouse", 1)
     ]
     
@@ -75,3 +76,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
