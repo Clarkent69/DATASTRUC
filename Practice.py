@@ -2,9 +2,12 @@
 #Basic search algorithm
 
 def linear_search(lyst, target):
+    comp_count = 0
     for index, value in enumerate(lyst):
+        comp_count = comp_count + 1
         if value == target:
             return index
+    print(f"Linear Search Comparison count {comp_count}")
     return -1
 
 # USING LYST COMPREHENSIONS, GENERATE A LIST THAT CONTAINS THE INTEGERS 1 TO 100
