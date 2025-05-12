@@ -1,4 +1,4 @@
-from LinkedList import *
+from SortingAlgo.LinkedList import *
 
 llist = LinkedList()
 
